@@ -1,4 +1,4 @@
-@media (min-width : 427px) and (max-width:768px) {
+@media (min-width : 427px) and (max-width:769px) {
     .food{
         width: 220px;
         height: 250px;
@@ -76,7 +76,6 @@
 }
 @media (min-width : 769px) {
     #favorite-model{
-        display: none;
         bottom: 0;
         left: 0;
         backdrop-filter: blur(10px);
@@ -90,7 +89,6 @@
 @media (max-width : 426px) and (min-width:377px) {
     #favorite-model{
         top:80px;
-        display: none;
     }
     .ddd{
         width: 100%;
@@ -147,7 +145,6 @@
 @media (max-width :376px) {
     #favorite-model{
         top:80px;
-        display: none;
     }
     .ddd{
         width: 100%;

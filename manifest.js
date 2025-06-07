@@ -118,7 +118,7 @@ function Update(searching,data) {
                 let food = `
                 <div class="food w-[350px] h-[400px] flex flex-col items-start bg-[#FFFFFF] rounded-3xl gap-2" id = "food${f.id}">
                             <div class="imageForfood w-[350px] h-[250px] overflow-hidden relative rounded-tl-3xl rounded-tr-3xl">
-                                <img src="${f.img}" alt="" class="absolute bottom-[-40px]">
+                                <img src="${f.img}" alt="" style="width: 100%; height: 100%;" >
                             </div>
                             <h1 class="ml-5 font-bold text-[17px]">${f.name}</h1>
                             <span class="ml-5 text-[14px] text-[#A6A6A6]"><span>${f.mass} гр.</span> | <span>${f.kalories} ккал</span></span>
@@ -154,8 +154,7 @@ function openFavModal() {
     let btn = document.getElementById("btnForFav")
     let modal = document.getElementById("favorite-model")
     btn.addEventListener("click", (e) => {
-        modal.style.display ="flex"
-        modal.style.bottom = "0px"
+        modal.classList.toggle("hidden")
         document.body.classList.toggle("overflow-hidden")
     })
 }
@@ -166,7 +165,7 @@ function closeFavModal() {
     let modal = document.getElementById("favorite-model")
     btnForclose.addEventListener("click", (e) => {
         document.body.classList.toggle("overflow-hidden")
-        modal.style.display = modal.style.display=="none"?"block":"none"
+        modal.classList.toggle("hidden")
         console.log(1);
         
     })
@@ -291,19 +290,21 @@ function DragFavModalForMobile() {
         let startY = 0
          modal.addEventListener("touchstart",(e)=>{
             startY = e.touches[0].clientY
-            document.body.classList.add("overflow-hidden")})
-        modal.addEventListener("touchend",(e)=>{
-            document.body.classList.remove("overflow-hidden")})
+            document.body.classList.add("overflow-hidden")
+        })
+        // modal.addEventListener("touchend",(e)=>{
+        //     document.body.classList.remove("overflow-hidden")})
 
             modal.addEventListener("touchmove",(e)=>{
             if(e.target.id ==modal.firstElementChild.id ){
+
                  if(startY>e.touches[0].clientY){
                 modal.firstElementChild.style.bottom= "-560px"
                   modal.firstElementChild.style.top = `${+modal.firstElementChild.style.bottom.split("p")[0] + 80}px`
                }else{
                   modal.firstElementChild.style.top = "0px"
                   modal.firstElementChild.style.bottom= "0px"
-                  
+                  document.body.classList.remove("overflow-hidden")
                }
             }
                
