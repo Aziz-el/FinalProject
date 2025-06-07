@@ -191,7 +191,7 @@ function ViewsFav(data) {
                 <div class="foodfav h-[100px] max-w-[800px] flex items-center justify-between bg-[#FFFFFF] rounded-3xl gap-2" id = "foodFav${f.id}">
                             <div class="flex items-center">
                             <div class="imageForfoodfav w-[100px] h-[100px] overflow-hidden relative rounded-bl-xl rounded-tl-xl">
-                                <img src="${f.img}" alt="" class="absolute bottom-[-40px]">
+                                <img src="${f.img}" alt="" class="w-[100%] h-[100%]">
                             </div>
                             <div class="flex flex-col gap-4">
                                     <h1 class="ml-5 font-bold text-[15px]">${f.name}</h1>
