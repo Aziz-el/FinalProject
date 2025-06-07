@@ -1,4 +1,4 @@
-@media (min-width : 550px) and (max-width:768px) {
+@media (min-width : 427px) and (max-width:768px) {
     .food{
         width: 220px;
         height: 250px;
@@ -44,7 +44,7 @@
     }
     #favorite-model {
         display: block;
-        bottom:-560px;
+        bottom:-85vh;
     }
     #favorite-model>.ddd{
         border-top-right-radius: 60px;
@@ -87,7 +87,7 @@
         overflow-y: scroll;
     }
 }
-@media (max-width : 550px) and (min-width:381px) {
+@media (max-width : 426px) and (min-width:377px) {
     #favorite-model{
         top:80px;
         display: none;
@@ -144,7 +144,7 @@
         max-width: 80vw;
     }
 }
-@media (max-width :380px) {
+@media (max-width :376px) {
     #favorite-model{
         top:80px;
         display: none;
