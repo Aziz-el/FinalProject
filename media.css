@@ -92,6 +92,7 @@
     }
     .ddd{
         width: 100%;
+        min-height: 100vh;   
     }
     .ddd>:last-child{
         overflow-y: scroll;
@@ -134,9 +135,6 @@
     .search>form>input{
         height: 40px;
     }
-    .ddd{
-        min-height: 80vw
-    }
     .menu>div{
         margin-inline: auto;
         max-width: 90vw;
@@ -151,7 +149,7 @@
     }
     .ddd{
         width: 100%;
-        min-height: 100%;
+        min-height: 100%;   
     }
     .ddd>:last-child{
         overflow-y: scroll;
