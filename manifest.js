@@ -50,7 +50,6 @@ async function CreateAndAddCategoriesAndFoods(data) {
     
         let foodsForCat = await fetch(`https://79640b006f96af9e.mokky.dev/foods?categoryId=${cat.id}`)
         let jsonFoods = await foodsForCat.json().then((d)=>{
-            console.log(d);
             for(f of d){
              let food = `<div class="food w-[350px] h-[400px] flex flex-col items-start bg-[#FFFFFF] rounded-3xl gap-2" id = "food${f.id}">
                             <div class="imageForfood w-[350px] h-[250px] overflow-hidden relative rounded-tl-3xl rounded-tr-3xl">
