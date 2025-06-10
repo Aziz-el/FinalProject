@@ -9,6 +9,7 @@ async function GetData() {
 
         data["categories"] = jsonOfcat
         data["foods"] = jsonOffood
+        
     } catch (error) {
         console.log("Error in MockAPi");
     }
@@ -16,7 +17,7 @@ async function GetData() {
 }
 
 
-function CreateAndAddCategoriesAndFoods(data) {
+async function CreateAndAddCategoriesAndFoods(data) {
     let categories = data["categories"]
     let foods = data["foods"]
 
@@ -46,10 +47,12 @@ function CreateAndAddCategoriesAndFoods(data) {
         let foodsDiv = document.createElement("div")
         foodsDiv.id = `category-${cat.id}`
         foodsDiv.classList.add("flex", "flex-wrap", "gap-[20px]")
-        for (f of foods) {
-            if (f.categoryId == cat.id) {
-                let food = `
-                <div class="food w-[350px] h-[400px] flex flex-col items-start bg-[#FFFFFF] rounded-3xl gap-2" id = "food${f.id}">
+    
+        let foodsForCat = await fetch(`https://79640b006f96af9e.mokky.dev/foods?categoryId=${cat.id}`)
+        let jsonFoods = await foodsForCat.json().then((d)=>{
+            console.log(d);
+            for(f of d){
+             let food = `<div class="food w-[350px] h-[400px] flex flex-col items-start bg-[#FFFFFF] rounded-3xl gap-2" id = "food${f.id}">
                             <div class="imageForfood w-[350px] h-[250px] overflow-hidden relative rounded-tl-3xl rounded-tr-3xl">
                                 <img src="${f.img}" style="width: 100%; height: 100%;" alt="" >
                             </div>
@@ -62,11 +65,10 @@ function CreateAndAddCategoriesAndFoods(data) {
                             </div>
                         </div>`
                 foodsDiv.innerHTML += food
-            }
         }
-
         choose.appendChild(foodsDiv)
         menu.appendChild(choose)
+    })
     }
 
 }
