@@ -1,4 +1,4 @@
-@media (min-width : 427px) and (max-width:769px) {
+@media (min-width : 426px) and (max-width:769px) {
     .food{
         width: 220px;
         height: 250px;
@@ -195,7 +195,7 @@
     }
     .menu>div{
         margin-inline: auto;
-        max-width: 90vw;
+        max-width: 100vw;
     }
 }
 .ddd{
