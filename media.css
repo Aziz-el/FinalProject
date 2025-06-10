@@ -1,6 +1,6 @@
-@media (min-width : 426px) and (max-width:769px) {
+@media (min-width : 626px) and (max-width:769px) {
     .food{
-        width: 220px;
+        width: 29vw;
         height: 250px;
         gap: 5px
     }
@@ -8,8 +8,8 @@
         height: 100px;
     }
     .imageForfood{
-        height: 150px;
-        width: 220px;
+        height:220px;
+        width: 30vw;
     }
     h1{
         font-size: 14px;
@@ -86,7 +86,7 @@
         overflow-y: scroll;
     }
 }
-@media (max-width : 426px) and (min-width:377px) {
+@media (max-width : 626px) and (min-width:377px) {
     #favorite-model{
         top:80px;
     }
@@ -106,12 +106,12 @@
         font-size: 15px;
     }
     .food{
-        width: 154px;
+        width: 40vw;
         height: 210px;
         gap:3px;
     }
     .imageForfood{
-        width: 154px;
+        width: 40vw;
     }
     .btns>:first-child{
         height: 30px;
@@ -139,10 +139,13 @@
     }
     .menu>div{
         margin-inline: auto;
-        max-width: 80vw;
+        max-width: 90vw;
     }
 }
 @media (max-width :376px) {
+    .menu{
+        padding-left: 4vw;
+    }
     #favorite-model{
         top:80px;
     }
